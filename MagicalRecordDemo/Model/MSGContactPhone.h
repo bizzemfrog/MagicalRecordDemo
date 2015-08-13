@@ -2,12 +2,14 @@
 //  MSGContactPhone.h
 //  MagicalRecordDemo
 //
-//  Created by John Donley on 8/12/15.
+//  Created by John Donley on 8/13/15.
 //  Copyright © 2015 john. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
+@class MSGContact;
 
 NS_ASSUME_NONNULL_BEGIN
 

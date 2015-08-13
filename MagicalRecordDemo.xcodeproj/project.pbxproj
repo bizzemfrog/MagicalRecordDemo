@@ -14,7 +14,8 @@
 		62BABEAF1B7C72C7003BCA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BABEAD1B7C72C7003BCA27 /* Main.storyboard */; };
 		62BABEB11B7C72C7003BCA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BABEB01B7C72C7003BCA27 /* Assets.xcassets */; };
 		62BABEB41B7C72C7003BCA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BABEB21B7C72C7003BCA27 /* LaunchScreen.storyboard */; };
-		62BABEC51B7C7695003BCA27 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 62BABEC41B7C7695003BCA27 /* Model */; };
+		62BABED61B7C79B0003BCA27 /* MSGContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BABED21B7C79B0003BCA27 /* MSGContact.m */; };
+		62BABED71B7C79B0003BCA27 /* MSGContactPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BABED51B7C79B0003BCA27 /* MSGContactPhone.m */; };
 		E67B3C10F0C24E0CA1B9F6D1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E0A664A8E248847B134421 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +32,12 @@
 		62BABEB31B7C72C7003BCA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62BABEB51B7C72C7003BCA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62BABEBB1B7C7679003BCA27 /* MagicalRecordDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MagicalRecordDemo-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		62BABEC41B7C7695003BCA27 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
-		62BABEC61B7C7756003BCA27 /* MSGContact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSGContact+CoreDataProperties.h"; path = "Model/MSGContact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		62BABED01B7C79B0003BCA27 /* MSGContact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSGContact+CoreDataProperties.h"; path = "Model/MSGContact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		62BABED11B7C79B0003BCA27 /* MSGContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSGContact.h; path = Model/MSGContact.h; sourceTree = "<group>"; };
+		62BABED21B7C79B0003BCA27 /* MSGContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSGContact.m; path = Model/MSGContact.m; sourceTree = "<group>"; };
+		62BABED31B7C79B0003BCA27 /* MSGContactPhone+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSGContactPhone+CoreDataProperties.h"; path = "Model/MSGContactPhone+CoreDataProperties.h"; sourceTree = "<group>"; };
+		62BABED41B7C79B0003BCA27 /* MSGContactPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSGContactPhone.h; path = Model/MSGContactPhone.h; sourceTree = "<group>"; };
+		62BABED51B7C79B0003BCA27 /* MSGContactPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSGContactPhone.m; path = Model/MSGContactPhone.m; sourceTree = "<group>"; };
 		B9CB15CC9851FCB3023ECDB1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +56,6 @@
 		62BABE981B7C72C7003BCA27 = {
 			isa = PBXGroup;
 			children = (
-				62BABEC61B7C7756003BCA27 /* MSGContact+CoreDataProperties.h */,
 				62BABEA31B7C72C7003BCA27 /* MagicalRecordDemo */,
 				62BABEA21B7C72C7003BCA27 /* Products */,
 				EAA44508533D2A4175C3CAC5 /* Pods */,
@@ -70,7 +74,7 @@
 		62BABEA31B7C72C7003BCA27 /* MagicalRecordDemo */ = {
 			isa = PBXGroup;
 			children = (
-				62BABEC41B7C7695003BCA27 /* Model */,
+				62BABECF1B7C7880003BCA27 /* Model */,
 				62BABEA41B7C72C7003BCA27 /* AppDelegate.swift */,
 				62BABEA91B7C72C7003BCA27 /* MasterViewController.swift */,
 				62BABEAB1B7C72C7003BCA27 /* DetailViewController.swift */,
@@ -82,6 +86,19 @@
 				62BABEBB1B7C7679003BCA27 /* MagicalRecordDemo-Bridging-Header.h */,
 			);
 			path = MagicalRecordDemo;
+			sourceTree = "<group>";
+		};
+		62BABECF1B7C7880003BCA27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62BABED01B7C79B0003BCA27 /* MSGContact+CoreDataProperties.h */,
+				62BABED11B7C79B0003BCA27 /* MSGContact.h */,
+				62BABED21B7C79B0003BCA27 /* MSGContact.m */,
+				62BABED31B7C79B0003BCA27 /* MSGContactPhone+CoreDataProperties.h */,
+				62BABED41B7C79B0003BCA27 /* MSGContactPhone.h */,
+				62BABED51B7C79B0003BCA27 /* MSGContactPhone.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		6BB0D175D23E7391332B0BF9 /* Frameworks */ = {
@@ -163,7 +180,6 @@
 			files = (
 				62BABEB41B7C72C7003BCA27 /* LaunchScreen.storyboard in Resources */,
 				62BABEB11B7C72C7003BCA27 /* Assets.xcassets in Resources */,
-				62BABEC51B7C7695003BCA27 /* Model in Resources */,
 				62BABEAF1B7C72C7003BCA27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,8 +226,10 @@
 			files = (
 				62BABEA81B7C72C7003BCA27 /* MagicalRecordDemo.xcdatamodeld in Sources */,
 				62BABEA51B7C72C7003BCA27 /* AppDelegate.swift in Sources */,
+				62BABED61B7C79B0003BCA27 /* MSGContact.m in Sources */,
 				62BABEAA1B7C72C7003BCA27 /* MasterViewController.swift in Sources */,
 				62BABEAC1B7C72C7003BCA27 /* DetailViewController.swift in Sources */,
+				62BABED71B7C79B0003BCA27 /* MSGContactPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

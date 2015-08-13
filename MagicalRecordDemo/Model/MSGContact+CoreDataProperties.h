@@ -2,7 +2,7 @@
 //  MSGContact+CoreDataProperties.h
 //  MagicalRecordDemo
 //
-//  Created by John Donley on 8/12/15.
+//  Created by John Donley on 8/13/15.
 //  Copyright © 2015 john. All rights reserved.
 //
 //  Delete this file and regenerate it using "Create NSManagedObject Subclass…"
@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MSGContact (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSDate *timestamp;
 @property (nullable, nonatomic, retain) MSGContactPhone *contactPhones;
 
 @end
