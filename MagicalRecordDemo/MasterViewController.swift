@@ -12,7 +12,7 @@ import CoreData
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
   var detailViewController: DetailViewController? = nil
-//  var managedObjectContext: NSManagedObjectContext? = nil
+  var managedObjectContext: NSManagedObjectContext? = nil
 
 
   override func viewDidLoad() {
@@ -48,23 +48,23 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
 //    newManagedObject.setValue(NSDate(), forKey: "timestamp")
-    context.MR_saveToPersistentStoreWithCompletion { (sucess, err) -> Void in
-      if err == nil {
-        print("saved yall", appendNewline: true)
-      } else {
-        print("error yall: \(err.localizedDescription)", appendNewline: true)
-      }
-    }
+//    context.MR_saveToPersistentStoreWithCompletion { (sucess, err) -> Void in
+//      if err == nil {
+//        print("saved yall", appendNewline: true)
+//      } else {
+//        print("error yall: \(err.localizedDescription)", appendNewline: true)
+//      }
+//    }
 
     // Save the context.
-//    do {
-//        try context.save()
-//    } catch {
-//        // Replace this implementation with code to handle the error appropriately.
-//        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//        //print("Unresolved error \(error), \(error.userInfo)")
-//        abort()
-//    }
+    do {
+        try context.save()
+    } catch {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        //print("Unresolved error \(error), \(error.userInfo)")
+        abort()
+    }
   }
 
   // MARK: - Segues
@@ -133,8 +133,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
       
       let fetchRequest = NSFetchRequest()
       // Edit the entity name as appropriate.
-
-      let entity = NSEntityDescription.entityForName("MSGContact", inManagedObjectContext:NSManagedObjectContext.MR_defaultContext())
+      let entity = NSEntityDescription.entityForName("MSGContact", inManagedObjectContext:self.managedObjectContext!)
+//      let entity = NSEntityDescription.entityForName("MSGContact", inManagedObjectContext:NSManagedObjectContext.MR_defaultContext())
       fetchRequest.entity = entity
       
       // Set the batch size to a suitable number.
@@ -147,7 +147,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
       
       // Edit the section name key path and cache name if appropriate.
       // nil for section name key path means "no sections".
-      let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext:NSManagedObjectContext.MR_defaultContext(), sectionNameKeyPath: nil, cacheName: nil)
+      let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext:self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
       aFetchedResultsController.delegate = self
       _fetchedResultsController = aFetchedResultsController
       

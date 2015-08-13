@@ -4,4 +4,4 @@
 
 #import "MSGContact.h"
 #import "MSGContactPhone.h"
-#import "MagicalRecord.h"
+//#import "MagicalRecord.h"
